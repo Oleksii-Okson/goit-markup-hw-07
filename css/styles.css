@@ -23,7 +23,13 @@
 }
 
 .section {
-    padding-top: 120px;
+    padding-top: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+    }
 }
 
 body {
@@ -55,6 +61,11 @@ body {
     z-index: var(--header-idx);
 }
 
+@media only screen and (max-width: 767px) {
+    .header-nav {
+        display: none;
+    }
+}
 
 .hero-container {
 
@@ -76,6 +87,12 @@ body {
 .header-adress-list {
     display: flex;
     gap: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .header-adress {
+        display: none;
+    }
 }
 
 .contacts {
@@ -215,37 +232,91 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
 
+
 }
 
 .title-light {
-    font-size: 56px;
-    line-height: 1.07;
-    color: #ffffff;
-    max-width: 496px;
+
+
+    font-size: 36px;
+    width: 320px;
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 48px;
-    font-weight: 700;
+    line-height: 1.11;
+    color: #ffffff;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin: 0 auto;
+    margin-bottom: 72px;
+    font-weight: 700;
 }
 
+@media only screen and (min-width: 768px) {
+    .title-light {
+        width: 496px;
+        text-transform: none;
+        font-size: 56px;
+        line-height: 1.07;
+        margin-bottom: 36px;
+    }
+}
+
+
+@media only screen and (min-width: 1158px) {
+    .title-light {
+        margin-bottom: 48px;
+    }
+}
+
+
+
 .title-section {
+
+    width: 428px;
+    height: 40px;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--secondary-txt-cl);
-    letter-spacing: 0.02em;
+    height: 40px;
+    margin-bottom: 72px;
+    /* width: 1128px; */
 }
 
-.hero {
-    background: var(--secondary-txt-cl);
-    padding: 188px 0;
-    background-image: linear-gradient (rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img-backround/people-office.jpg);
+
+
+@media only screen and (min-width: 768px) {
+    .title-section {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .title-section {
+        width: 1128px;
+    }
 }
 
 .footer {
     background: var(--secondary-txt-cl);
+    padding: 96px 0;
+    width: 428px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer {
+        width: 768px;
+    }
+}
+
+
+@media only screen and (min-width: 1158px) {
+    .footer {
+        width: 1158px;
+        padding: 100px 0;
+    }
 }
 
 .header-studio:hover,
@@ -339,10 +410,34 @@ button {
 }
 
 .container {
-    width: 1158px;
-    padding: 0 15px;
+    /* basic styles */
+    min-width: 320px;
+    max-width: 428px;
+    padding: 0 16px;
     margin: 0 auto;
+    /* width: 1158px; */
 }
+
+/* tablet screen */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 767px;
+    }
+}
+
+/* desktop screen */
+@media only screen and (min-width: 1158px) {
+    .container {
+        max-width: 1157px;
+        padding: 0 15px;
+    }
+}
+
+
+
+
+
+
 
 .header-adress {
     font-style: normal;
@@ -367,10 +462,24 @@ button {
 }
 
 .aboutteam-item {
+
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 0) / 1);
 }
+
+@media only screen and (min-width: 768px) {
+    .aboutteam-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .aboutteam-item {
+        width: calc((100% - 72px) / 4);
+    }
+}
+
 
 .contacts:hover {
     color: #404bbf;
@@ -381,25 +490,67 @@ button {
 }
 
 .about-list {
+    width: 396px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 24px;
-    width: 1128px;
+    gap: 72px 24px;
 
+}
 
+@media only screen and (min-width: 768px) {
+    .about-list {
+        align-items: center;
+        width: 736px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .about-list {
+        width: 1128px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.about-item {
+    width: 396px;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-item {
+        width: 356px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .about-item {
+        width: 264px;
+    }
 }
 
 .title-jobs {
     margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
 }
 
-.title-section {
+@media only screen and (min-width: 768px) {
+    .title-jobs {
+        text-align: start;
+    }
+}
 
-    width: 1128px;
-    height: 40px;
-    margin-bottom: 72px;
+@media only screen and (min-width: 1158px) {
+    .title-jobs {
+        text-align: start;
+    }
 }
 
 .about,
@@ -410,6 +561,13 @@ button {
 
 .aboutdo {
     padding-top: 0;
+    display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+    .aboutdo {
+        display: flex;
+    }
 }
 
 
@@ -434,17 +592,27 @@ button {
 }
 
 .subtitle-work {
-    width: 264px;
-    height: 104px;
+
+    width: 396px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
 
-.footer {
-    padding: 100px 0;
-
+@media only screen and (min-width: 1158px) {
+    .subtitle-work {
+        font-weight: 400;
+        width: 264px;
+    }
 }
+
+
 
 .footer-link {
+    width: 117px;
     display: inline-block;
+    text-align: center;
     margin-bottom: 16px;
     margin-left: 0;
 }
@@ -465,13 +633,32 @@ button {
 }
 
 .aboutteam-list {
+    width: 264px;
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 72px;
+    /* gap: 24px; */
 }
 
-.title-team {
-    width: 1158px;
-    height: 40px;
+@media only screen and (min-width: 768px) {
+    .aboutteam-list {
+        display: flex;
+        flex-direction: row;
+        width: 556px;
+        gap: 64px 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .aboutteam-list {
+        display: flex;
+        flex-direction: row;
+        width: 1140px;
+        gap: 24px;
+    }
 }
 
 .title-teams {
@@ -551,13 +738,30 @@ button {
 /* main */
 
 .hero {
+    width: 428px;
+    padding: 112px 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background: var(--secondary-txt-cl);
+    /* padding: 188px 0;
+max-width: 1440px; */
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero {
+        width: 1158px;
+        padding: 188px 0;
+    }
 }
 
 .title-light {
@@ -617,7 +821,8 @@ button {
 }
 
 .icons {
-    display: flex;
+
+    display: none;
     justify-content: center;
     align-items: center;
     height: 112px;
@@ -626,29 +831,74 @@ button {
     margin-bottom: 8px;
 }
 
+@media only screen and (min-width: 1158px) {
+    .icons {
+        display: flex;
+    }
+}
+
 .customers-section {
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
 .customers {
+    width: 396px;
+    gap: 72px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    flex-wrap: wrap;
 }
 
-.title-customes {
+@media only screen and (min-width: 768px) {
+    .customers {
+        width: 522px;
+        gap: 72px 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .customers {
+        width: 1128px;
+        gap: 24px;
+    }
+}
+
+.title-customers {
+    text-align: center;
     line-height: 1.1;
+    width: 428px;
+}
+
+@media only screen and (min-width: 768px) {
+    .title-customers {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .title-customers {
+        width: 1128px;
+    }
 }
 
 .customers-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 168px;
+    width: 190px;
     height: 88px;
     border-radius: 4px;
+    /* 
+    width: 168px;
+    */
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-icon {
+        width: 168px;
+    }
 }
 
 .customers-link {
@@ -677,7 +927,14 @@ button {
 }
 
 .customers-icons {
+    width: 110px;
     fill: currentColor;
+}
+
+@media only screen and (min-width: 768px) {
+    .customers-icons {
+        width: 104px;
+    }
 }
 
 
@@ -688,15 +945,38 @@ button {
 /* footer */
 
 .footer-social {
-    width: 208px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* width: 208px;
     height: 80px;
-    margin-right: auto;
+    margin-right: auto; */
 }
 
 .footer-section {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px 24px;
+}
 
+@media only screen and (min-width: 768px) {
+    .footer-section {
+        width: 768px;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .footer-section {
+        width: 1158px;
+        flex-direction: row;
+        align-items: baseline;
+    }
 }
 
 .footer-name {
@@ -717,8 +997,23 @@ button {
 }
 
 .logo-paragraf {
-    margin-right: 120px;
+    margin: 0 auto;
+    /* margin-right: 120px; */
+    width: 268px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .logo-paragraf {
+        width: 264px;
+        align-items: flex-start;
+    }
+}
+
 
 .socials-link-footer {
     display: flex;
@@ -996,10 +1291,22 @@ button {
     opacity: 1;
 }
 
-.footer-input {
+.footer-email {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-input {
+    text-align: center;
     margin-top: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-input {
+        display: flex;
+        gap: 72px 24px;
+    }
 }
 
 .footer-label {
