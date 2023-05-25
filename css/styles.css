@@ -89,9 +89,11 @@ body {
     gap: 40px;
 }
 
-@media only screen and (max-width: 767px) {
-    .header-adress {
-        display: none;
+@media only screen and (min-width: 768px) {
+    .header-adress-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
@@ -144,9 +146,14 @@ body {
     letter-spacing: 0.02em;
     display: block;
     margin-right: 76px;
-
-
 }
+
+@media only screen and (min-width: 768px) {
+    .header-link {
+        margin-right: 120px;
+    }
+}
+
 
 .header-link:hover,
 .header-link:focus {
@@ -458,7 +465,7 @@ button {
 
 .aboutteam {
     background-color: #F4F4FD;
-
+    width: max-content;
 }
 
 .aboutteam-item {
@@ -468,11 +475,6 @@ button {
     width: calc((100% - 0) / 1);
 }
 
-@media only screen and (min-width: 768px) {
-    .aboutteam-item {
-        width: calc((100% - 24px) / 2);
-    }
-}
 
 @media only screen and (min-width: 1158px) {
     .aboutteam-item {
@@ -504,6 +506,7 @@ button {
     .about-list {
         align-items: center;
         width: 736px;
+        flex-direction: row;
     }
 }
 
@@ -521,7 +524,7 @@ button {
 
 @media only screen and (min-width: 768px) {
     .about-item {
-        width: 356px;
+        flex-basis: calc((100% - 24px) / 2);
     }
 }
 
@@ -600,6 +603,13 @@ button {
     font-weight: 500;
 }
 
+@media only screen and (min-width: 768px) {
+    .subtitle-work {
+
+        width: auto;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
     .subtitle-work {
         font-weight: 400;
@@ -615,6 +625,19 @@ button {
     text-align: center;
     margin-bottom: 16px;
     margin-left: 0;
+
+
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4D5AE5;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: block;
+    margin-right: 0px;
 }
 
 .footer-title {
@@ -633,7 +656,7 @@ button {
 }
 
 .aboutteam-list {
-    width: 264px;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -647,7 +670,8 @@ button {
     .aboutteam-list {
         display: flex;
         flex-direction: row;
-        width: 556px;
+        width: auto;
+        justify-content: center;
         gap: 64px 24px;
     }
 }
@@ -853,7 +877,7 @@ max-width: 1440px; */
 
 @media only screen and (min-width: 768px) {
     .customers {
-        width: 522px;
+        width: auto;
         gap: 72px 24px;
     }
 }
@@ -968,6 +992,7 @@ max-width: 1440px; */
     .footer-section {
         width: 768px;
         flex-direction: row;
+        padding: 16px 108px;
     }
 }
 
@@ -1011,6 +1036,7 @@ max-width: 1440px; */
     .logo-paragraf {
         width: 264px;
         align-items: flex-start;
+        margin: 0;
     }
 }
 
@@ -1297,6 +1323,12 @@ max-width: 1440px; */
     gap: 16px;
 }
 
+@media only screen and (max-width:767px) {
+    .footer-email {
+        width: 398px;
+    }
+}
+
 .footer-input {
     text-align: center;
     margin-top: 16px;
@@ -1315,6 +1347,13 @@ max-width: 1440px; */
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--body-cl);
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-label {
+        margin: 0;
+    }
 }
 
 .fotter-field {
@@ -1326,6 +1365,18 @@ max-width: 1440px; */
     border-radius: 4px;
     background: #2E2F42;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width: 767px) {
+    .fotter-field {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .fotter-field {
+        margin-bottom: 16px;
+    }
 }
 
 .fotter-field:focus {
@@ -1353,6 +1404,13 @@ max-width: 1440px; */
     color: #FFFFFF;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media only screen and (max-width: 767px) {
+    .btn-footer {
+        margin: 0;
+    }
+}
+
 
 .btn-footer:hover,
 .btn-footer:focus {
