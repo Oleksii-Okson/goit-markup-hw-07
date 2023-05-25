@@ -97,6 +97,15 @@ body {
     }
 }
 
+
+@media only screen and (min-width: 1158px) {
+    .header-adress-list {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
 .contacts {
     display: block;
     gap: 40px;
@@ -151,6 +160,13 @@ body {
 @media only screen and (min-width: 768px) {
     .header-link {
         margin-right: 120px;
+    }
+}
+
+
+@media only screen and (min-width: 1158px) {
+    .header-link {
+        margin-right: 76px;
     }
 }
 
@@ -321,8 +337,7 @@ body {
 
 @media only screen and (min-width: 1158px) {
     .footer {
-        width: 1158px;
-        padding: 100px 0;
+        width: auto;
     }
 }
 
@@ -468,6 +483,13 @@ button {
     width: max-content;
 }
 
+@media only screen and (min-width: 1158px) {
+    .aboutteam {
+        width: auto;
+    }
+}
+
+
 .aboutteam-item {
 
     background-color: #FFFFFF;
@@ -478,7 +500,7 @@ button {
 
 @media only screen and (min-width: 1158px) {
     .aboutteam-item {
-        width: calc((100% - 72px) / 4);
+        width: auto;
     }
 }
 
@@ -531,6 +553,7 @@ button {
 @media only screen and (min-width: 1158px) {
     .about-item {
         width: 264px;
+        flex-basis: auto;
     }
 }
 
@@ -974,10 +997,14 @@ max-width: 1440px; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
 
-    /* width: 208px;
-    height: 80px;
-    margin-right: auto; */
+@media only screen and (min-width: 1158px) {
+    .footer-social {
+        width: 208px;
+        height: 80px;
+        margin-right: auto;
+    }
 }
 
 .footer-section {
@@ -1001,6 +1028,8 @@ max-width: 1440px; */
         width: 1158px;
         flex-direction: row;
         align-items: baseline;
+        flex-wrap: nowrap;
+        padding: 0;
     }
 }
 
@@ -1015,6 +1044,12 @@ max-width: 1440px; */
 
 }
 
+@media only screen and (min-width: 1158px) {
+    .footer-name {
+        margin-right: auto;
+    }
+}
+
 .footer-list {
     display: flex;
     gap: 16px;
@@ -1023,7 +1058,6 @@ max-width: 1440px; */
 
 .logo-paragraf {
     margin: 0 auto;
-    /* margin-right: 120px; */
     width: 268px;
     display: flex;
     align-items: center;
@@ -1037,6 +1071,13 @@ max-width: 1440px; */
         width: 264px;
         align-items: flex-start;
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .logo-paragraf {
+
+        margin-right: 120px;
     }
 }
 
@@ -1326,6 +1367,12 @@ max-width: 1440px; */
 @media only screen and (max-width:767px) {
     .footer-email {
         width: 398px;
+    }
+}
+
+@media only screen and (min-width:1158px) {
+    .footer-email {
+        gap: 0;
     }
 }
 
