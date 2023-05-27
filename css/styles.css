@@ -61,9 +61,9 @@ body {
     z-index: var(--header-idx);
 }
 
-.hamburger {
+.burger {
     width: 32px;
-    height: 32px;
+    height: 22px;
     fill: #FFFFFF;
 }
 
@@ -1698,8 +1698,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
     flex-grow: 0;
 }
 
-.burger {
-    background-color: #2E2F42;
-    border-radius: 4px;
 
+.burger {
+    stroke: black;
 }
