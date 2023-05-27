@@ -1699,6 +1699,14 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 }
 
 
-.burger {
-    stroke: black;
+.burger-icon {
+    fill: #2E2F42;
+    stroke: #2E2F42;
+    border: 3px solid #2E2F42;
+
+}
+
+.burger-svg {
+
+    border-radius: 2px;
 }
