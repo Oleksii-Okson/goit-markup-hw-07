@@ -74,6 +74,12 @@ body {
     width: 1158px;
 }
 
+@media only screen and (max-width: 767px) {
+    .hero-container {
+        width: auto;
+    }
+}
+
 .header-nav-list {
     display: flex;
     flex-direction: row;
@@ -281,6 +287,12 @@ body {
     margin: 0 auto;
     margin-bottom: 72px;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+    .title-light {
+        width: auto;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -803,7 +815,7 @@ button {
 /* main */
 
 .hero {
-    width: 428px;
+    min-width: 428px;
     padding: 112px 0;
     margin-left: auto;
     margin-right: auto;
@@ -815,8 +827,7 @@ button {
     background: var(--secondary-txt-cl);
 }
 
-
-/* @media screen and (min-device-pixel-ratio: 2),
+@media screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .hero {
@@ -830,6 +841,7 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
+/*
 @media screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi) and (min-width: 768px),
 screen and (min-resolution: 2dppx) and (min-width: 768px) {
@@ -887,15 +899,15 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../img/hero/bg_tablet@2x.jpg');
     }
 } */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
     .hero {
-        width: 768px;
+        width: auto;
     }
 }
 
 @media only screen and (min-width: 1158px) {
     .hero {
-        width: 1158px;
+        width: 1440px;
         padding: 188px 0;
     }
 }
@@ -1291,7 +1303,9 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 
 @media only screen and (max-width: 767px) {
     .modal {
-        width: 392px;
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -1598,16 +1612,14 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
     left: 0;
     display: flex;
     flex-direction: column;
-
-
     min-width: 100vw;
-    height: 100vh;
+    height: 90vh;
     padding: 40px;
     padding-top: 80px;
     background-color: #FFFFFF;
     z-index: 999;
 
-    transform: translateX(100%);
+    transform: translateX(150%);
     transition: transform 250ms ease-in-out;
 }
 
