@@ -23,6 +23,7 @@
 }
 
 .section {
+    min-width: 320px;
     padding-top: 96px;
 }
 
@@ -447,7 +448,6 @@ button {
     max-width: 428px;
     padding: 0 16px;
     margin: 0 auto;
-    /* width: 1158px; */
 }
 
 /* tablet screen */
@@ -1612,6 +1612,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 }
 
 .menu-container.is-open {
+    width: 100%;
     transform: translateX(0);
 }
 
